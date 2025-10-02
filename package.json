@@ -1,0 +1,24 @@
+{
+  "name": "validacao-formulario",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "tailwind": "npx @tailwindcss/cli -i ./src/css/styles.css -o ./src/css/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinicim002/validacao-formulario-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinicim002/validacao-formulario-js/issues"
+  },
+  "homepage": "https://github.com/vinicim002/validacao-formulario-js#readme",
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.14",
+    "tailwindcss": "^4.1.14"
+  }
+}
