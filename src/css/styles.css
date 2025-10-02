@@ -1,2 +1,5 @@
 @import "tailwindcss";
 
+#container-esquerdo {
+    clip-path: path("M 0% 100% L 0% 30% A 2% 2% 0 0 1 75% 30% L 100% 100% Z");
+}

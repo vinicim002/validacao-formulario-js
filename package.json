@@ -2,6 +2,7 @@
   "name": "validacao-formulario",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "tailwind": "npx @tailwindcss/cli -i ./src/css/styles.css -o ./src/css/output.css --watch"
   },
