@@ -1,4 +1,5 @@
 /*! tailwindcss v4.1.14 | MIT License | https://tailwindcss.com */
+@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -6,11 +7,17 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-black: #000;
     --spacing: 0.25rem;
+    --text-6xl: 3.75rem;
+    --text-6xl--line-height: 1;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+    --radius-2xl: 1rem;
     --radius-4xl: 2rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-black-100: hsl(228, 8%, 12%);
+    --color-white-200: hsl(0, 0%, 94%);
   }
 }
 @layer base {
@@ -162,17 +169,32 @@
   }
 }
 @layer utilities {
+  .m-1 {
+    margin: calc(var(--spacing) * 1);
+  }
+  .m-2 {
+    margin: calc(var(--spacing) * 2);
+  }
+  .m-3 {
+    margin: calc(var(--spacing) * 3);
+  }
   .m-3\.5 {
     margin: calc(var(--spacing) * 3.5);
   }
   .flex {
     display: flex;
   }
+  .table {
+    display: table;
+  }
   .max-h-screen {
     max-height: 100vh;
   }
   .min-h-screen {
     min-height: 100vh;
+  }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
@@ -183,19 +205,131 @@
   .w-screen {
     width: 100vw;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .resize {
+    resize: both;
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .justify-center {
+    justify-content: center;
+  }
   .rounded-4xl {
     border-radius: var(--radius-4xl);
   }
-  .bg-black {
-    background-color: var(--color-black);
+  .rounded-tr-4xl {
+    border-top-right-radius: var(--radius-4xl);
   }
-  .bg-\[url\(\/src\/images\/background\.jpg\)\] {
-    background-image: url(/src/images/background.jpg);
+  .rounded-b-2xl {
+    border-bottom-right-radius: var(--radius-2xl);
+    border-bottom-left-radius: var(--radius-2xl);
+  }
+  .rounded-b-4xl {
+    border-bottom-right-radius: var(--radius-4xl);
+    border-bottom-left-radius: var(--radius-4xl);
+  }
+  .rounded-br-4xl {
+    border-bottom-right-radius: var(--radius-4xl);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .bg-black-100 {
+    background-color: var(--color-black-100);
+  }
+  .bg-\[url\(\/src\/images\/background4\.jpg\)\] {
+    background-image: url(/src/images/background4.jpg);
   }
   .bg-cover {
     background-size: cover;
   }
   .bg-center {
     background-position: center;
+  }
+  .pt-14 {
+    padding-top: calc(var(--spacing) * 14);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-6xl {
+    font-size: var(--text-6xl);
+    line-height: var(--tw-leading, var(--text-6xl--line-height));
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
+  .text-white-200 {
+    color: var(--color-white-200);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+}
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
+      --tw-border-style: solid;
+      --tw-font-weight: initial;
+      --tw-outline-style: solid;
+    }
   }
 }
